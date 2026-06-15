@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>风俗人文 - 河南旅游网</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#D4A017',
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- 导航栏（复用首页代码） -->
+    <nav class="bg-primary text-white sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-4 py-3 flex flex-col md:flex-row justify-between items-center">
+            <div class="font-bold text-xl mb-2 md:mb-0">河南旅游网</div>
+            <div class="flex space-x-4 md:space-x-8 text-sm md:text-base">
+                <a href="index.html" class="hover:text-yellow-200 transition">首页</a>
+                <a href="attractions.html" class="hover:text-yellow-200 transition">热门景点</a>
+                <a href="food.html" class="hover:text-yellow-200 transition">特产美食</a>
+                <a href="culture.html" class="hover:text-yellow-200 transition">风俗人文</a>
+                <a href="survey.html" class="hover:text-yellow-200 transition">用户调研</a>
+            </div>
+        </div>
+    </nav>
+
+<!-- 风俗人文 Banner -->
+<div class="h-48 md:h-64 bg-cover bg-center relative" style="background-image: url('images/banner-culture.jpg');">
+    <!-- 半透明遮罩，让白色字更清晰 -->
+    <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+        <h1 class="text-white text-3xl md:text-4xl font-bold">风俗人文</h1>
+    </div>
+</div>
+
+    <!-- 人文内容 -->
+    <section class="py-10 container mx-auto px-4">
+        <!-- 洛阳人文 -->
+        <div class="mb-10">
+            <h2 class="text-xl font-bold text-primary mb-4 border-l-4 border-primary pl-3">洛阳</h2>
+            <div class="space-y-6">
+                <div class="flex flex-col md:flex-row gap-4 items-center bg-white p-4 rounded-lg shadow">
+                    <div class="w-full md:w-1/2">
+                        <h3 class="font-bold text-lg mb-2">洛阳牡丹文化节</h3>
+                        <p class="text-gray-700 text-sm">洛阳牡丹文化节始于1983年，每年4月至5月举办，是中国历史最悠久的花卉节庆之一。作为"千年帝都，牡丹花城"，洛阳栽培牡丹的历史可追溯至隋唐时期，如今拥有9大色系、1200多个品种。节日期间，王城公园、中国国花园等十大观赏园区内，百万株牡丹竞相绽放，姚黄、魏紫、豆绿等名贵品种争奇斗艳，花海如潮，花香袭人。除了赏花，还举办牡丹插花艺术展、牡丹文化论坛、非遗展演等活动，其中"牡丹仙子"选拔大赛已成为文化节的标志性活动。洛阳牡丹文化节不仅是一场花卉盛宴，更是中原文化对外展示的重要窗口。</p>
+                    </div>
+                    <img src="images/peony.jpg" alt="牡丹文化节" class="w-full md:w-1/2 h-48 object-cover rounded">
+                </div>
+                <div class="flex flex-col md:flex-row-reverse gap-4 items-center bg-white p-4 rounded-lg shadow">
+                    <div class="w-full md:w-1/2">
+                        <h3 class="font-bold text-lg mb-2">河洛大鼓</h3>
+                        <p class="text-gray-700 text-sm">河洛大鼓是河南传统曲艺的代表之一，起源于清代中期的洛阳一带，2006年被列入国家级非物质文化遗产名录。表演时艺人左手执钢板、右手持鼓槌，配合三弦、坠琴等乐器，唱腔刚健明快，富有浓郁的地方特色。曲目内容多取材于历史故事和民间传说，《三国演义》《水浒传》等经典名著常被改编为说唱段子。最具特色的是"鼓点套路"，通过"凤凰三点头""双插花"等不同节奏的鼓点，配合钢板的清脆声响，营造出或紧张或欢快的氛围。如今在洛阳老城的茶馆酒肆，仍能听到艺人用河洛大鼓讲述中原往事，这种古老的艺术形式已成为洛阳文化记忆的重要组成部分。</p>
+                    </div>
+                    <img src="images/heluodagu.jpg" alt="河洛大鼓" class="w-full md:w-1/2 h-48 object-cover rounded">
+                </div>
+            </div>
+        </div>
+
+        <!-- 开封人文 -->
+        <div class="mb-10">
+            <h2 class="text-xl font-bold text-primary mb-4 border-l-4 border-primary pl-3">开封</h2>
+            <div class="space-y-6">
+                <div class="flex flex-col md:flex-row gap-4 items-center bg-white p-4 rounded-lg shadow">
+                    <div class="w-full md:w-1/2">
+                        <h3 class="font-bold text-lg mb-2">开封清明文化节</h3>
+                        <p class="text-gray-700 text-sm">开封清明文化节以北宋都城东京（今开封）的清明习俗为蓝本，每年清明前后举办。作为《清明上河图》的创作原型地，开封复原了宋代"插柳戴花""秋千蹴鞠""踏青赏春"等传统习俗。最具特色的是"清明大巡游"，演员身着宋代服饰，组成皇家仪仗队、市井商贩、杂耍艺人等队伍，沿着御街缓缓前行，重现北宋都城的繁华景象。此外还有"宋式点茶"表演，茶艺师按照《茶录》记载的古法，碾茶、筛茶、冲点、击拂，展示宋代文人的雅致生活。文化节期间，龙亭公园的"大宋花朝节"、清明上河园的"岳飞枪挑小梁王"实景演出等活动，让游客沉浸式体验千年宋韵。</p>
+                    </div>
+                    <img src="images/qingmingculture.jpg" alt="清明文化节" class="w-full md:w-1/2 h-48 object-cover rounded">
+                </div>
+                <div class="flex flex-col md:flex-row-reverse gap-4 items-center bg-white p-4 rounded-lg shadow">
+                    <div class="w-full md:w-1/2">
+                        <h3 class="font-bold text-lg mb-2">朱仙镇木版年画</h3>
+                        <p class="text-gray-700 text-sm">朱仙镇木版年画是中国四大年画之一，始于唐，兴于宋，盛于明清，至今已有1000多年历史。其制作工艺独特，采用"阴阳刻"技法，线条粗犷有力，色彩以矿物颜料为主，红、黄、绿等原色搭配鲜明，具有强烈的视觉冲击力。题材多为门神、灶君、戏曲故事等，其中"秦琼敬德"门神画像最为经典，被称为"中国年画鼻祖"。朱仙镇年画不仅是春节的装饰艺术品，更承载着中原百姓的祈福文化。2006年，朱仙镇木版年画被列入首批国家级非物质文化遗产名录，如今在开封朱仙镇的年画作坊，仍能看到匠人沿用传统工艺雕版印刷，让这门古老技艺焕发新生。</p>
+                    </div>
+                    <img src="images/zhuxianzhen.jpg" alt="朱仙镇木版年画" class="w-full md:w-1/2 h-48 object-cover rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-primary text-white py-4 text-center text-sm">
+        <p>©河南旅游</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户调研 - 河南旅游网</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#D4A017',
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-primary text-white sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-4 py-3 flex flex-col md:flex-row justify-between items-center">
+            <div class="font-bold text-xl mb-2 md:mb-0">河南旅游网</div>
+            <div class="flex space-x-4 md:space-x-8 text-sm md:text-base">
+                <a href="index.html" class="hover:text-yellow-200 transition">首页</a>
+                <a href="attractions.html" class="hover:text-yellow-200 transition">热门景点</a>
+                <a href="food.html" class="hover:text-yellow-200 transition">特产美食</a>
+                <a href="culture.html" class="hover:text-yellow-200 transition">风俗人文</a>
+                <a href="survey.html" class="hover:text-yellow-200 transition">用户调研</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-10 container mx-auto px-4 max-w-2xl">
+        <h1 class="text-2xl font-bold text-center text-primary mb-8">—— 用户调研 ——</h1>
+        <form id="surveyForm" class="bg-white p-6 rounded-lg shadow">
+            <div class="mb-6">
+                <label class="block mb-2 text-sm font-medium">1. 请问您到河南旅游过吗？</label>
+                <div class="flex items-center space-x-4">
+                    <label class="flex items-center">
+                        <input type="radio" name="visited" value="有过" class="mr-2"> 有过
+                    </label>
+                    <label class="flex items-center">
+                        <input type="radio" name="visited" value="没有" class="mr-2"> 没有
+                    </label>
+                </div>
+                <p class="text-red-500 text-xs mt-1 hidden" id="visitedError">请选择一项</p>
+            </div>
+
+            <div class="mb-6">
+                <label class="block mb-2 text-sm font-medium">2. 您最喜欢/最想去河南哪几个城市旅游？（可多选）</label>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
+                    <label class="flex items-center">
+                        <input type="checkbox" name="cities" value="洛阳" class="mr-2"> 洛阳
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" name="cities" value="开封" class="mr-2"> 开封
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" name="cities" value="郑州" class="mr-2"> 郑州
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" name="cities" value="安阳" class="mr-2"> 安阳
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" name="cities" value="焦作" class="mr-2"> 焦作
+                    </label>
+                </div>
+                <input type="text" name="otherCity" placeholder="其他：" class="mt-2 border border-gray-300 rounded px-2 py-1 text-sm w-full">
+                <p class="text-red-500 text-xs mt-1 hidden" id="citiesError">请至少选择一个城市</p>
+            </div>
+
+            <div class="mb-6">
+                <label class="block mb-2 text-sm font-medium">3. 您通常旅游会几人结伴？</label>
+                <select name="companions" class="border border-gray-300 rounded px-2 py-1 text-sm w-full">
+                    <option value="">请选择</option>
+                    <option value="独自">独自</option>
+                    <option value="2人">2人</option>
+                    <option value="3-5人">3-5人</option>
+                    <option value="6人以上">6人以上</option>
+                </select>
+                <p class="text-red-500 text-xs mt-1 hidden" id="companionsError">请选择结伴人数</p>
+            </div>
+
+            <div class="mb-6">
+                <label class="block mb-2 text-sm font-medium">4. 您通常旅游几天？</label>
+                <div class="flex flex-col space-y-2">
+                    <label class="flex items-center">
+                        <input type="radio" name="days" value="1-2天" class="mr-2"> 1-2天
+                    </label>
+                    <label class="flex items-center">
+                        <input type="radio" name="days" value="3-5天" class="mr-2"> 3-5天
+                    </label>
+                    <label class="flex items-center">
+                        <input type="radio" name="days" value="6-10天" class="mr-2"> 6-10天
+                    </label>
+                    <label class="flex items-center">
+                        <input type="radio" name="days" value="10天以上" class="mr-2"> 10天以上
+                    </label>
+                </div>
+                <p class="text-red-500 text-xs mt-1 hidden" id="daysError">请选择一项</p>
+            </div>
+
+            <div class="mb-6">
+                <label class="block mb-2 text-sm font-medium">5. 您对我们有什么工作建议吗？</label>
+                <textarea name="suggestion" rows="3" class="border border-gray-300 rounded px-2 py-1 text-sm w-full" placeholder="请输入您的建议..."></textarea>
+            </div>
+
+            <button type="submit" class="bg-primary hover:bg-yellow-600 text-white font-medium py-2 px-6 rounded transition">提交</button>
+        </form>
+    </section>
+
+    <footer class="bg-primary text-white py-4 text-center text-sm">
+        <p>©河南旅游</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

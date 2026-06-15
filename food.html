@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>特产美食 - 河南旅游网</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#D4A017',
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- 导航栏（复用首页代码） -->
+    <nav class="bg-primary text-white sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-4 py-3 flex flex-col md:flex-row justify-between items-center">
+            <div class="font-bold text-xl mb-2 md:mb-0">河南旅游网</div>
+            <div class="flex space-x-4 md:space-x-8 text-sm md:text-base">
+                <a href="index.html" class="hover:text-yellow-200 transition">首页</a>
+                <a href="attractions.html" class="hover:text-yellow-200 transition">热门景点</a>
+                <a href="food.html" class="hover:text-yellow-200 transition">特产美食</a>
+                <a href="culture.html" class="hover:text-yellow-200 transition">风俗人文</a>
+                <a href="survey.html" class="hover:text-yellow-200 transition">用户调研</a>
+            </div>
+        </div>
+    </nav>
+<!-- 热门景点 Banner -->
+<div class="h-48 md:h-64 bg-cover bg-center relative" style="background-image: url('images/banner-scenic.jpg');">
+    <!-- 半透明遮罩，让白色字更清晰 -->
+    <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+        <h1 class="text-white text-3xl md:text-4xl font-bold">热门景点</h1>
+    </div>
+</div>
+
+
+    <!-- 美食列表 -->
+    <section class="py-10 container mx-auto px-4">
+        <!-- 洛阳美食 -->
+        <div class="mb-10">
+            <h2 class="text-xl font-bold text-primary mb-4 border-l-4 border-primary pl-3">洛阳</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <img src="images/shuixi.jpg" alt="洛阳水席" class="w-full h-40 object-cover">
+                    <div class="p-3">
+                        <h3 class="font-bold">洛阳水席</h3>
+                        <p class="text-xs text-gray-600 mt-1">始于唐代的传统宴席，24道菜全用汤类贯穿，酸辣味美，「牡丹燕菜」是代表性菜品。</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <img src="images/jiangmian.jpg" alt="浆面条" class="w-full h-40 object-cover">
+                    <div class="p-3">
+                        <h3 class="font-bold">浆面条</h3>
+                        <p class="text-xs text-gray-600 mt-1">以发酵酸浆煮面，搭配芹菜、黄豆等，酸香开胃，是洛阳人偏爱的早餐之一。</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <img src="images/bufantang.jpg" alt="不翻汤" class="w-full h-40 object-cover">
+                    <div class="p-3">
+                        <h3 class="font-bold">不翻汤</h3>
+                        <p class="text-xs text-gray-600 mt-1">用绿豆粉摊制薄饼，佐以虾皮、紫菜、胡椒粉熬汤，鲜香微辣，非遗老字号「刘记不翻汤」最有名。</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <img src="images/mengjinli.jpg" alt="孟津梨" class="w-full h-40 object-cover">
+                    <div class="p-3">
+                        <h3 class="font-bold">孟津梨</h3>
+                        <p class="text-xs text-gray-600 mt-1">栽培历史超2000年，个大汁甜，曾为宫廷贡品，富含维生素和氨基酸。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 开封美食 -->
+        <div class="mb-10">
+            <h2 class="text-xl font-bold text-primary mb-4 border-l-4 border-primary pl-3">开封</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <img src="images/guanxiaobao.jpg" alt="开封灌汤包" class="w-full h-40 object-cover">
+                    <div class="p-3">
+                        <h3 class="font-bold">开封灌汤包</h3>
+                        <p class="text-xs text-gray-600 mt-1">北宋传承至今的名点，面皮薄如纸、汤汁丰沛，「第一楼」灌汤包被誉为「中州膳食一绝」。</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <img src="images/juziji.jpg" alt="桶子鸡" class="w-full h-40 object-cover">
+                    <div class="p-3">
+                        <h3 class="font-bold">桶子鸡</h3>
+                        <p class="text-xs text-gray-600 mt-1">选用本地柴鸡，以百年老汤卤制，皮黄肉嫩，咸香爽口，是开封宴席必备凉菜。</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <img src="images/chaoliangfen.jpg" alt="炒凉粉" class="w-full h-40 object-cover">
+                    <div class="p-3">
+                        <h3 class="font-bold">炒凉粉</h3>
+                        <p class="text-xs text-gray-600 mt-1">用红薯凉粉加蒜末、辣椒炒制，焦香入味，西司夜市和鼓楼夜市的摊位最具烟火气。</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <img src="images/huashenggao.jpg" alt="花生糕" class="w-full h-40 object-cover">
+                    <div class="p-3">
+                        <h3 class="font-bold">花生糕</h3>
+                        <p class="text-xs text-gray-600 mt-1">精选尉氏花生与白糖熬制，酥香松脆，非遗工艺制作，是开封经典的伴手礼。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-primary text-white py-4 text-center text-sm">
+        <p>©河南旅游</p>
+    </footer>
+</body>
+</html>

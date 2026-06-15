@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>热门景点 - 河南旅游网</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#D4A017',
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- 导航栏（复用首页代码） -->
+    <nav class="bg-primary text-white sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-4 py-3 flex flex-col md:flex-row justify-between items-center">
+            <div class="font-bold text-xl mb-2 md:mb-0">河南旅游网</div>
+            <div class="flex space-x-4 md:space-x-8 text-sm md:text-base">
+                <a href="index.html" class="hover:text-yellow-200 transition">首页</a>
+                <a href="attractions.html" class="hover:text-yellow-200 transition">热门景点</a>
+                <a href="food.html" class="hover:text-yellow-200 transition">特产美食</a>
+                <a href="culture.html" class="hover:text-yellow-200 transition">风俗人文</a>
+                <a href="survey.html" class="hover:text-yellow-200 transition">用户调研</a>
+            </div>
+        </div>
+    </nav>
+
+<!-- 热门景点 Banner -->
+<div class="h-48 md:h-64 bg-cover bg-center relative" style="background-image: url('images/banner-scenic.jpg');">
+    <!-- 半透明遮罩，让白色字更清晰 -->
+    <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+        <h1 class="text-white text-3xl md:text-4xl font-bold">热门景点</h1>
+    </div>
+</div>
+
+    <!-- 景点列表 -->
+    <section class="py-10 container mx-auto px-4">
+        <!-- 洛阳景点 -->
+        <div class="mb-10">
+            <h2 class="text-xl font-bold text-primary mb-4 border-l-4 border-primary pl-3">洛阳</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <img src="images/longmen.jpg" alt="龙门石窟" class="w-full h-40 object-cover">
+                    <div class="p-3">
+                        <h3 class="font-bold">龙门石窟</h3>
+                        <p class="text-xs text-gray-600 mt-1">世界文化遗产，开凿于北魏至唐代，拥有2100多个窟龛、10万余尊造像，卢舍那大佛气势恢宏。</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <img src="images/baimasi.jpg" alt="白马寺" class="w-full h-40 object-cover">
+                    <div class="p-3">
+                        <h3 class="font-bold">白马寺</h3>
+                        <p class="text-xs text-gray-600 mt-1">中国第一座官办寺院，始建于东汉，是佛教传入中国的标志性建筑，现存元代夹纻干漆造像精美绝伦。</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <img src="images/laojunshan.jpg" alt="洛阳老君山" class="w-full h-40 object-cover">
+                    <div class="p-3">
+                        <h3 class="font-bold">洛阳老君山</h3>
+                        <p class="text-xs text-gray-600 mt-1">伏牛山主峰，相传为老子归隐修炼之地，金顶道观群在云海中若隐若现，被誉为“仙山琼阁”。</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <img src="images/luoyanggucheng.jpg" alt="洛阳古城" class="w-full h-40 object-cover">
+                    <div class="p-3">
+                        <h3 class="font-bold">洛阳古城</h3>
+                        <p class="text-xs text-gray-600 mt-1">青砖灰瓦的仿古建筑群，夜晚灯笼高悬，可品尝水席、浆面条等美食，体验盛唐风情。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 开封景点 -->
+        <div class="mb-10">
+            <h2 class="text-xl font-bold text-primary mb-4 border-l-4 border-primary pl-3">开封</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <img src="images/qingming.jpg" alt="清明上河园" class="w-full h-40 object-cover">
+                    <div class="p-3">
+                        <h3 class="font-bold">清明上河园</h3>
+                        <p class="text-xs text-gray-600 mt-1">以《清明上河图》为蓝本复原的宋代主题公园，可观“岳飞枪挑小梁王”实景演出，体验汴绣、活字印刷。</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <img src="images/kaifengfu.jpg" alt="开封府" class="w-full h-40 object-cover">
+                    <div class="p-3">
+                        <h3 class="font-bold">开封府</h3>
+                        <p class="text-xs text-gray-600 mt-1">北宋时期的行政官署，“包青天”包拯曾在此任职，可观看“开衙仪式”，了解宋代司法文化。</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <img src="images/longting.jpg" alt="龙亭公园" class="w-full h-40 object-cover">
+                    <div class="p-3">
+                        <h3 class="font-bold">龙亭公园</h3>
+                        <p class="text-xs text-gray-600 mt-1">建在北宋皇宫遗址上的皇家园林，潘杨二湖分列两侧，春季樱花、秋季菊展景色宜人。</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <img src="images/daxiangguo.jpg" alt="大相国寺" class="w-full h-40 object-cover">
+                    <div class="p-3">
+                        <h3 class="font-bold">大相国寺</h3>
+                        <p class="text-xs text-gray-600 mt-1">北宋时期的皇家寺院，《水浒传》中鲁智深倒拔垂杨柳的故事发生地，寺内千手千眼观音像工艺精湛。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-primary text-white py-4 text-center text-sm">
+        <p>©河南旅游</p>
+    </footer>
+</body>
+</html>
